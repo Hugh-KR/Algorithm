@@ -20,7 +20,6 @@ public class BOJ_11726_230829 {
 
         long[] dp = new long[n+1];
 
-
         for (int i = 1; i <= n; i++) {
             if (i == 1) {
                 dp[i] = 1;
