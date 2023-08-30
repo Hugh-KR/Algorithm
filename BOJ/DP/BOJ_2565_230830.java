@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.StringTokenizer;
 
 /*
-    11:30~
+    11:30~12:30
 
     *LIS*
 
