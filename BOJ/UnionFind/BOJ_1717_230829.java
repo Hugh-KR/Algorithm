@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class BOJ_1717_230829 {
     static int n,m;
     static int[] arr;
+    static int[] rank;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -17,6 +18,7 @@ public class BOJ_1717_230829 {
         m = Integer.parseInt(st.nextToken());
 
         arr = new int[n+1];
+        rank = new int[n+1];
         for (int i = 0; i <= n; i++) {
             arr[i] = i;
         }
@@ -38,9 +40,20 @@ public class BOJ_1717_230829 {
         System.out.println(sb);
     }
 
+    // 유니온과 파인드는 종속적
     static void _union(int a, int b) { // Rank: 최대 높이 확인해서 합쳐줘라
         a = _find(a); // 조상에 합쳐라
         b = _find(b);
+
+        if (a == b) return;
+
+        if (rank[a] < rank[b]) arr[b] = a;
+        else if (rank[a] > rank[b]) arr[a] = b;
+        else {
+            arr[a] = b;
+            rank[a]+=1;
+        }
+
         arr[a] = b;
     }
     static int _find(int a) {
