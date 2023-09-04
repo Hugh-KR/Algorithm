@@ -16,6 +16,7 @@ import java.util.ArrayList;
     - 이진트리는 루트를 기준으로 왼쪽 오른쪽
     - 전위 순회는 루트가 먼저 나온다
     - 필요하다면 메서드 분리하며 풀어보자
+
  */
 public class BOJ_5639_230904 {
 
