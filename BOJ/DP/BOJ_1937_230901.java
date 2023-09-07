@@ -15,6 +15,7 @@ import java.util.StringTokenizer;
 
     - 2차원 DP
  */
+
 public class BOJ_1937_230901 {
     static int n;
     static int[][] map;
