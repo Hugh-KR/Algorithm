@@ -16,7 +16,7 @@
 s = input()
 result = []
 value = 0
-K1KA5CB70
+
 for x in s:
     if x.isalpha():
         result.append(x)
