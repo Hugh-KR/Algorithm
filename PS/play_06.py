@@ -1,4 +1,4 @@
-
+import time
 
 # 정렬 풀이 O(nlogn)
 # def pro(nums): 
@@ -42,5 +42,10 @@ def longestConsecutive(nums):
     return longest_streak
 
 
+start_time = time.time()
 
 print(longestConsecutive(nums))
+
+end_time = time.time()
+
+print("time:", end_time - start_time);
