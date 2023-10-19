@@ -3,7 +3,7 @@ import sys
 num_list = list(map(int, sys.stdin.readline().rstrip()))
 
 def plusOrMultply(leftVal, rightVal):
-    if leftVal == 0 or rightVal == 0:
+    if leftVal <= 1 or rightVal <= 1:
         return leftVal + rightVal
     
     return leftVal * rightVal
