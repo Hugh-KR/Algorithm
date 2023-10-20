@@ -59,7 +59,6 @@ for com in commend:
 
     x, y = nx, ny
 
-
 print(x, y)
 
 
