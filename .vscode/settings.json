@@ -1,7 +1,12 @@
 {
+  "python.languageServer": "Pylance",
+  "python.autoComplete.addBrackets": true,
+
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+
   "python.formatting.provider": "none",
-  "cSpell.words": ["indicator"]
+  "cSpell.words": ["indicator"],
+  "python.analysis.completeFunctionParens": true
 }
