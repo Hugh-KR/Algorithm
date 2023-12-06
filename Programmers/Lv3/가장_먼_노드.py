@@ -5,6 +5,7 @@
 """
 
 import heapq
+from collections import deque
 
 def solution(n, edge):
     answer = 0
@@ -35,9 +36,29 @@ def solution(n, edge):
                 if cost < distance[i[0]]:
                     distance[i[0]] = cost
                     heapq.heappush(q, (cost, i[0]))
-                    
-            
-    dijkstra(1)
+    
+    # bfs                
+    def bfs(start):
+        q = deque([start])
+        distance[start] = 0
+        
+        while q:
+            now = q.popleft()
+            for i in graph[now]:
+                if distance[i[0]] != INF:
+                    continue
+                q.append(i[0])
+                distance[i[0]] = distance[now] + 1
+                
+    # dijkstra(1)
     # 올바른 최대값 개수 추출 위한 INF 모두 0으로 변경
+    # distance = [0 if x == INF else x for x in distance]
+    # return distance.count(max(distance))
+    
+    bfs(1)
     distance = [0 if x == INF else x for x in distance]
     return distance.count(max(distance))
+    
+n = 6
+vertex = [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]
+solution(n, vertex)
