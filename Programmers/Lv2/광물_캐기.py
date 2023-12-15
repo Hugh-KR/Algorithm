@@ -34,6 +34,7 @@ def make_minerals_list(minerals):
         if minerals[i] == 'stone':
             minerals_list[i//5][2] += 1
     # 광물의 순서를 다이아, 철, 돌 순서대로 정렬해줌
+    # lambda의 첫 번째 인자를 기준으로 먼저 내림차순 정렬, 그 다음 두 번째, 세 번째 순서로 내림차순 
     minerals_list.sort(key=lambda x:(-x[0],-x[1],-x[2]))
     return minerals_list
 
