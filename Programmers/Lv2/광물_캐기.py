@@ -21,6 +21,7 @@ def slice_minerals(picks, minerals):
 # 광물을 연속해서 5개 캐야하므로 5개씩 광물을 잘라 새로운 배열에 저장한다.
 def make_minerals_list(minerals):
     # 각각 다이아, 철, 돌
+    # 다섯 개로 나누어지지 않는 마지막 부분 대비해 배열 + 1
     minerals_list = [[0,0,0] for _ in range(len(minerals)//5+1)]
     for i in range(len(minerals)):
         if minerals[i] == 'diamond':
