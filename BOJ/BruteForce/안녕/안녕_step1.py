@@ -51,7 +51,7 @@ else:
             # 현재 최대 채력이 0보다 크고 얻은 기쁨이 최대 기쁨보다 큰 경우 최대 기쁨 갱신
             if max_health > 0 and happy > max_happy:
                 max_happy = happy
-
+    # 최대 기쁨 출력
     print(max_happy)
 
 
